@@ -10,7 +10,7 @@ const spotifyApi = new SpotifyWebApi();
 const clientID = '8ba44158505b4495ab2d524151c6fe94';
 const AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize';
 const RESPONSE_TYPE = 'token';
-const REDIRECT_URI = "http://localhost:3000";
+const REDIRECT_URI = "https://Prithvi-Kanaujia.github.io/spotify-roundup";
 
 const SCOPE = 'user-read-private user-read-email user-read-playback-state user-modify-playback-state user-read-recently-played user-top-read';
 
