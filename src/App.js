@@ -10,8 +10,8 @@ const spotifyApi = new SpotifyWebApi();
 const clientID = '8ba44158505b4495ab2d524151c6fe94';
 const AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize';
 const RESPONSE_TYPE = 'token';
-const REDIRECT_URI = "https://Prithvi-Kanaujia.github.io/spotify-roundup";
-
+// const REDIRECT_URI = "https://Prithvi-Kanaujia.github.io/spotify-roundup";
+const REDIRECT_URI = "http://localhost:3000";
 const SCOPE = 'user-read-private user-read-email user-read-playback-state user-modify-playback-state user-read-recently-played user-top-read';
 
 const getToken = () => {
@@ -160,25 +160,34 @@ function App() {
   
   return (
     <div className="app">
-    {!loggedIn && <a href = {`${AUTH_ENDPOINT}?client_id=${clientID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPE}&response_type=${RESPONSE_TYPE}&show_dialog=true`} >Login to Spotify</a>}
+      
+    {!loggedIn && (
+      <div class = "loginPage"> 
+        <h2>Your Spotify Roundup Awaits </h2>
+        <button 
+          class ="login-button" 
+          onClick={()=>{window.location.href = `${AUTH_ENDPOINT}?client_id=${clientID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPE}&response_type=${RESPONSE_TYPE}&show_dialog=true`}}
+          >Login to Spotify
+        </button>
+      </div>)}
     {loggedIn && (
-      <><div>NEW PAGE: </div>
+      <><div> </div>
       <div class="button-container">
         <button class = "custom-button" onClick={getTopItems}> Get my top artists</button>
         <button class = "custom-button" onClick={getTopTracks}> Get my top songs</button>
       </div>  
     <div class="custom-select">
-    <select id="timeframeSelect" >
-      <option value="0">Select Timeframe</option>
-      <option value="1">4 weeks</option>
-      <option value="2">6 months</option>
-      <option value="3">All time</option>
-    </select>
+      <select class ="dropdown" id="timeframeSelect" >
+        {/* <option value="0">Select Timeframe</option> */}
+        <option value="0">4 weeks</option>
+        <option value="1">6 months</option>
+        <option value="2">All time</option>
+      </select>
+    </div>
     <div className='artists-grid'>
       {song ?renderTracks():renderArtists() }
     </div>
     
-    </div>
   </>
     )}
     
