@@ -320,7 +320,7 @@ h1 {
   /* display: flex; */
   align-items: center;
   justify-content: center;
-  margin:102vh;
+  margin:10vh;
   padding: 1rem;
   border-radius: 1rem;
   /* border-width: 2rem;
@@ -345,10 +345,10 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
   flex-direction: column;
-  width: 100vw;
-  /* margin: 50rem; */
+  /* width: 100vw; */
+  margin: 15%;
 }
 .loginPage h2 {
  

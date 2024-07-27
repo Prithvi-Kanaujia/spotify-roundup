@@ -10,8 +10,8 @@ const spotifyApi = new SpotifyWebApi();
 const clientID = '8ba44158505b4495ab2d524151c6fe94';
 const AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize';
 const RESPONSE_TYPE = 'token';
-// const REDIRECT_URI = "https://Prithvi-Kanaujia.github.io/spotify-roundup";
-const REDIRECT_URI = "http://localhost:3000";
+const REDIRECT_URI = "https://Prithvi-Kanaujia.github.io/spotify-roundup";
+// const REDIRECT_URI = "http://localhost:3000";
 const SCOPE = 'user-read-private user-read-email user-read-playback-state user-modify-playback-state user-read-recently-played user-top-read';
 
 const getToken = () => {
@@ -171,7 +171,7 @@ function App() {
         </button>
       </div>)}
     {loggedIn && (
-      <><div> </div>
+      <><div> dcww</div>
       <div class="button-container">
         <button class = "custom-button" onClick={getTopItems}> Get my top artists</button>
         <button class = "custom-button" onClick={getTopTracks}> Get my top songs</button>
