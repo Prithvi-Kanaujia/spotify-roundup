@@ -171,7 +171,7 @@ function App() {
         </button>
       </div>)}
     {loggedIn && (
-      <><div> dcww</div>
+      <><div></div>
       <div class="button-container">
         <button class = "custom-button" onClick={getTopItems}> Get my top artists</button>
         <button class = "custom-button" onClick={getTopTracks}> Get my top songs</button>
